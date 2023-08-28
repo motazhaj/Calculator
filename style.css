@@ -1,0 +1,91 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+body {
+  align-items: center;
+  background: linear-gradient(3200deg, #0f023a, #fe0d81, #4c3bb0);
+  display: flex;
+  font-family: "Handjet", sans-serif;
+  font-display: swap;
+  height: inherit;
+  justify-content: center;
+}
+
+.wrapper {
+  backdrop-filter: blur(5.5px);
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.01);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+  color: #fff;
+
+  flex-basis: 400px;
+  height: 570px;
+  padding: 30px 35px;
+}
+
+.screen {
+  backdrop-filter: blur(5.5px);
+  background: rgba(35, 35, 35, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.01);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+  font-size: 50px;
+  padding: 10px 25px;
+  overflow: auto;
+  text-align: right;
+}
+
+/* buttons */
+
+.calc-button-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 5% 0;
+}
+
+.calc-button {
+  backdrop-filter: blur(5.5px);
+  background: rgba(1, 1, 1, 0.1);
+  border: 1px solid rgba(1, 1, 1, 0.01);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+  color: #fff;
+  flex-basis: 20%;
+  height: 65px;
+  font-family: inherit;
+  font-size: 50px;
+}
+
+.calc-button:last-child {
+  backdrop-filter: blur(5.5px);
+  background: #88e0f9;
+  border: 1px solid rgba(1, 1, 1, 0.01);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+  color: #232323;
+
+}
+
+.calc-button:hover {
+  background: #ff9c2a;
+  color: #0f023a;
+}
+
+.calc-button:last-child:hover {
+  background: #0f023a;
+  color: #fff;
+}
+
+.double{
+    flex-basis: 47%;
+}
