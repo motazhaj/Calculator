@@ -5,14 +5,16 @@ class Calculator {
     this.clear();
   }
   clear() {
-    this.currentOperand = "";
+    this.currentOperand = "0";
     this.previousOperand = "";
-    this.history = "";
     this.operation = undefined;
   }
 
   delete() {
     this.currentOperand = this.currentOperand.toString().slice(0, -1);
+    if(this.currentOperand === ""){
+      this.currentOperand = "0";
+    }
   }
 
   appendNumber(number) {
@@ -29,7 +31,6 @@ class Calculator {
     }
     this.operation = operation;
     this.previousoperand = this.currentOperand;
-    this.history += this.currentOperand + " " + this.operation + " ";
     this.currentOperand = "";
   }
 
@@ -85,6 +86,8 @@ class Calculator {
     if (this.operation != null) {
       this.previousOperandElement.innerText =
         this.getDisplayNumber(this.previousoperand) + " " + this.operation;
+    } else {
+      this.previousOperandElement.innerText = "";
     }
   }
 }
