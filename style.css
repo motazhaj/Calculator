@@ -26,12 +26,12 @@ body {
   background: linear-gradient(3200deg, #0f023a, #fe0d81, #4c3bb0);
   display: flex;
   font-family: "Handjet", sans-serif;
-  font-display: swap;
   height: inherit;
   justify-content: center;
 }
 
-.wrapper {
+.calculator {
+  margin: 16px;
   backdrop-filter: blur(5.5px);
   background: rgba(0, 0, 0, 0.3);
   border: 1px solid rgba(0, 0, 0, 0.01);
@@ -40,20 +40,39 @@ body {
   color: #fff;
 
   flex-basis: 400px;
-  height: 570px;
+  height: 590px;
   padding: 30px 35px;
 }
 
 .screen {
-  backdrop-filter: blur(5.5px);
-  background: rgba(35, 35, 35, 0.1);
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: rgba(35, 35, 35, 0.2);
   border: 1px solid rgba(0, 0, 0, 0.01);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
-  font-size: 50px;
+  font-size: 48px;
   padding: 10px 25px;
-  overflow: auto;
+  align-items: flex-end;
   text-align: right;
+}
+
+.screen div {
+  overflow: auto;
+  width: 100%;
+
+}
+
+.previous-operand {
+  overflow: auto;
+  font-size: 20px;
+  color: #ffffff7a;
+}
+
+.current-operand {
+  overflow: auto;
 }
 
 /* buttons */
@@ -64,9 +83,8 @@ body {
   margin: 5% 0;
 }
 
-.calc-button {
-  backdrop-filter: blur(5.5px);
-  background: rgba(1, 1, 1, 0.1);
+.calc-button-row button {
+  background: rgba(35, 35, 35, 0.3);
   border: 1px solid rgba(1, 1, 1, 0.01);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
@@ -77,7 +95,7 @@ body {
   font-size: 50px;
 }
 
-.calc-button:last-child {
+.calc-button-row button:last-child {
   backdrop-filter: blur(5.5px);
   background: #88e0f9;
   border: 1px solid rgba(1, 1, 1, 0.01);
@@ -86,20 +104,20 @@ body {
   color: #232323;
 }
 
-.calc-button:hover {
+.calc-button-row button:hover {
   background: #ff9c2a;
   color: #0f023a;
 }
 
-.calc-button:last-child:hover {
+.calc-button-row button:last-child:hover {
   background: #0f023a;
   color: #fff;
 }
 
-.double {
+.calc-button-row .double {
   flex-basis: 47%;
 }
 
-.trible {
+.calc-button-row .trible {
   flex-basis: 73%;
 }
